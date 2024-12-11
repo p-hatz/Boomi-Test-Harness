@@ -191,7 +191,7 @@
                     <configuration>
                         <message combined="false">
                             <msgTxt>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
-&lt;bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="//!wip/Functional" componentId="b47b9d5a-7d46-46bd-b9a5-5adb702a67c0" version="260" name="(wsvc) 1. Test Controller - Main" type="process" createdDate="2024-11-03T09:21:19Z" createdBy="peterantony@boomi.com" modifiedDate="2024-12-06T06:42:57Z" modifiedBy="peterantony@boomi.com" deleted="false" currentVersion="true" folderName="Functional" folderId="Rjo3MDgzMjQ4" branchName="main" branchId="Qjo0NjgxMw"&gt;
+&lt;bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" name="(wsvc) 1. Test Controller - Main" type="process"&gt;
     &lt;bns:encryptedValues/&gt;
     &lt;bns:description&gt;&lt;/bns:description&gt;
     &lt;bns:object&gt;
