@@ -8,7 +8,7 @@
 4. Update the `Globs` Shape
     - `dppAccountId` to your AtomSphere Account Id
     - `dppEnvId` to your AtomSphere Environment Id where the Test Harness will be deployed
-    - `dppProdIdController` to the UUID of `(wsvc) 1. Test Controller - Main`
+    - `dppProdIdController` to the UUID of `(wsvc) 1. Test Controller`
 5. Update the `(conn) AtomSphere API` (Boomi AtomSphere API) Connections
     - WSDL
     - Username
