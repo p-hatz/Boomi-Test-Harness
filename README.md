@@ -31,3 +31,21 @@
     - Connection URL
     - User Name
     - Password
+### Call the Create API Test Process
+12. Provide the Id of the Process under test
+    {
+      "processId": "5b9cf704-3f42-4e40-b0fd-5027a400e90a"
+    }
+
+    You should get something like
+    "Clone da3ba1f4-0f18-4b40-a149-9a54c01248b9 created from 5b9cf704-3f42-4e40-b0fd-5027a400e90a"
+
+    ### Call the Test Controller Process
+13. Provide the Clone Id and the Id of the Process under test
+    {
+      "processIdParent": "5b9cf704-3f42-4e40-b0fd-5027a400e90a",
+      "processIdChild": "da3ba1f4-0f18-4b40-a149-9a54c01248b9",
+      "testSuiteId": 1
+    }
+
+    Each Test Case in the Test Suite (1) should be run, where you will get a `0` for Success and `1` for Fail
