@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" name="(wsvc) 1. Test Controller" type="process">
+<bns:encryptedValues/>
+    <bns:description></bns:description>
+    <bns:object>
+        <process xmlns="" allowSimultaneous="true" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="false" workload="general">
+            <shapes>
+                <shape image="start" name="shape1" shapetype="start" userlabel="" x="48.0" y="46.0">
+                    <configuration>
+                        <connectoraction actionType="Listen" allowDynamicCredentials="NONE" connectorType="wss" hideSettings="true" operationId="04f58c73-5081-4e73-aab5-4ad8316f259e">
+                            <parameters/>
+                            <dynamicProperties/>
+                        </connectoraction>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape1.dragpoint1" toShape="shape7" x="224.0" y="56.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="branch_icon" name="shape2" shapetype="branch" userlabel="" x="816.0" y="48.0">
+                    <configuration>
+                        <branch numBranches="2"/>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint identifier="1" name="shape2.dragpoint1" text="1" toShape="shape12" x="992.0" y="56.0"/>
+                        <dragpoint identifier="2" name="shape2.dragpoint2" text="2" toShape="shape5" x="992.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="processcall_icon" name="shape5" shapetype="processcall" userlabel="" x="1008.0" y="208.0">
+                    <configuration>
+                        <processcall abort="true" processId="e7d73492-ba8f-426e-bba5-2cc27ca296dc" wait="true">
+                            <parameters/>
+                            <returnpaths>
+                                <returnpaths childShapeName="shape65"/>
+                            </returnpaths>
+                        </processcall>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint identifier="shape65" name="shape5.dragpoint1" toShape="shape20" x="1184.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="documentproperties_icon" name="shape7" shapetype="documentproperties" userlabel="Globs" x="240.0" y="48.0">
+                    <configuration>
+                        <documentproperties>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Process Property - dppProcessIdParent" persist="false" propertyId="process.dppProcessIdParent" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="2" valueType="profile">
+                                        <profileelement elementId="4" elementName="processIdParent (Root/Object/processIdParent)" profileId="ad671605-cde3-4e44-af69-e8fc4a007230" profileType="profile.json"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Process Property - dppTestSuiteId" persist="false" propertyId="process.dppTestSuiteId" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="3" valueType="profile">
+                                        <profileelement elementId="6" elementName="testSuiteId (Root/Object/testSuiteId)" profileId="ad671605-cde3-4e44-af69-e8fc4a007230" profileType="profile.json"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Process Property - dppProcessIdChild" persist="false" propertyId="process.dppProcessIdChild" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="4" valueType="profile">
+                                        <profileelement elementId="5" elementName="processIdChild (Root/Object/processIdChild)" profileId="ad671605-cde3-4e44-af69-e8fc4a007230" profileType="profile.json"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Process Property - dppExecutionId" persist="false" propertyId="process.dppExecutionId" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="5" valueType="execution">
+                                        <executionparameter executionproperty="Execution Id"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                        </documentproperties>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape7.dragpoint1" toShape="shape10" x="416.0" y="56.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="connectoraction_icon" name="shape10" shapetype="connectoraction" userlabel="" x="432.0" y="48.0">
+                    <configuration>
+                        <connectoraction actionType="GET" allowDynamicCredentials="NONE" connectionId="634d7f82-0da3-414c-b0ef-1e4206624e40" connectorType="officialboomi-X3979C-dbv2da-prod" hideSettings="false" operationId="52d8f42a-491b-49b6-820c-5b0a8685c842" parameter-profile="d7a3d9f8-95ca-4ccb-9a03-ff1a11c00b9b">
+                            <parameters>
+                                <parametervalue elementToSetId="8" elementToSetName="processIdSrc (Object/processIdSrc)" key="0" valueType="process">
+                                    <processparameter processproperty="dppProcessIdParent" processpropertydefaultvalue=""/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="9" elementToSetName="processIdClone (Object/processIdClone)" key="1" valueType="process">
+                                    <processparameter processproperty="dppProcessIdChild" processpropertydefaultvalue=""/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="7" elementToSetName="tsId (Object/tsId)" key="2" valueType="process">
+                                    <processparameter processproperty="dppTestSuiteId" processpropertydefaultvalue=""/>
+                                </parametervalue>
+                            </parameters>
+                            <dynamicProperties/>
+                        </connectoraction>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape10.dragpoint1" toShape="shape13" x="608.0" y="56.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="doccacheload_icon" name="shape12" shapetype="doccacheload" userlabel="" x="1008.0" y="48.0">
+                    <configuration>
+                        <doccacheload docCache="7fdd8274-2c8a-4ec1-a012-a4a6ed643728"/>
+                    </configuration>
+                    <dragpoints/>
+                </shape>
+                <shape image="documentproperties_icon" name="shape13" shapetype="documentproperties" userlabel="Test Case Id" x="624.0" y="48.0">
+                    <configuration>
+                        <documentproperties>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Document Property - ddpTestCaseId" persist="false" propertyId="dynamicdocument.ddpTestCaseId" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="1" valueType="profile">
+                                        <profileelement elementId="6" elementName="tcId (Object/tcId)" profileId="382cd078-df47-4e8a-977e-47bc5c309820" profileType="profile.json"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                        </documentproperties>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape13.dragpoint1" toShape="shape2" x="800.0" y="56.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="decision_icon" name="shape16" shapetype="decision" userlabel="Actual = Expected" x="1392.0" y="208.0">
+                    <configuration>
+                        <decision comparison="equals" name="Actual = Expected">
+                            <decisionvalue valueType="track">
+                                <trackparameter defaultValue="" propertyId="dynamicdocument.ddpActualVal" propertyName="Dynamic Document Property - ddpActualVal"/>
+                            </decisionvalue>
+                            <decisionvalue valueType="documentcache">
+                                <documentcacheparameter docCache="7fdd8274-2c8a-4ec1-a012-a4a6ed643728" docCacheIndex="1" elementId="5" elementName="val (Object/val)">
+                                    <cacheKeyValues>
+                                        <cacheKeyValue cacheKeyId="2">
+                                            <parametervalue key="2" valueType="process">
+                                                <processparameter processproperty="dppTestSuiteId" processpropertydefaultvalue=""/>
+                                            </parametervalue>
+                                        </cacheKeyValue>
+                                        <cacheKeyValue cacheKeyId="3">
+                                            <parametervalue key="3" valueType="track">
+                                                <trackparameter defaultValue="" propertyId="dynamicdocument.ddpTestCaseId" propertyName="Dynamic Document Property - ddpTestCaseId"/>
+                                            </parametervalue>
+                                        </cacheKeyValue>
+                                    </cacheKeyValues>
+                                </documentcacheparameter>
+                            </decisionvalue>
+                        </decision>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint identifier="true" name="shape16.dragpoint1" text="True" toShape="shape23" x="1568.0" y="216.0"/>
+                        <dragpoint identifier="false" name="shape16.dragpoint2" text="False" toShape="shape24" x="1568.0" y="376.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="documentproperties_icon" name="shape20" shapetype="documentproperties" userlabel="Actual Value" x="1200.0" y="208.0">
+                    <configuration>
+                        <documentproperties>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Document Property - ddpActualVal" persist="false" propertyId="dynamicdocument.ddpActualVal" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="1" valueType="current"/>
+                                </sourcevalues>
+                            </documentproperty>
+                        </documentproperties>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape20.dragpoint1" toShape="shape16" x="1376.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="documentproperties_icon" name="shape23" shapetype="documentproperties" userlabel="Test Status - Success" x="1584.0" y="208.0">
+                    <configuration>
+                        <documentproperties>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Document Property - ddpTestCaseStatus" persist="false" propertyId="dynamicdocument.ddpTestCaseStatus" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="1" valueType="static">
+                                        <staticparameter staticproperty="0"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                        </documentproperties>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape23.dragpoint1" toShape="shape28" x="1760.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="documentproperties_icon" name="shape24" shapetype="documentproperties" userlabel="Test Status - Fail" x="1584.0" y="368.0">
+                    <configuration>
+                        <documentproperties>
+                            <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="Dynamic Document Property - ddpTestCaseStatus" persist="false" propertyId="dynamicdocument.ddpTestCaseStatus" shouldEncrypt="false">
+                                <sourcevalues>
+                                    <parametervalue key="1" valueType="static">
+                                        <staticparameter staticproperty="1"/>
+                                    </parametervalue>
+                                </sourcevalues>
+                            </documentproperty>
+                        </documentproperties>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape24.dragpoint1" toShape="shape28" x="1760.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="connectoraction_icon" name="shape28" shapetype="connectoraction" userlabel="" x="1776.0" y="208.0">
+                    <configuration>
+                        <connectoraction actionType="INSERT" allowDynamicCredentials="NONE" connectionId="0c7f488c-78fe-485d-b1fe-08e2c85e74d5" connectorType="officialboomi-X3979C-dbv2da-prod" hideSettings="false" operationId="14a44dbf-0c22-4e96-9b27-fa2e8530429e" parameter-profile="2a216266-2511-43c7-b8a4-02f9f639866e">
+                            <parameters>
+                                <parametervalue elementToSetId="9" elementToSetName="execId (Object/execId)" key="5" valueType="process">
+                                    <processparameter processproperty="dppExecutionId" processpropertydefaultvalue=""/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="6" elementToSetName="tsId (Object/tsId)" key="0" valueType="process">
+                                    <processparameter processproperty="dppTestSuiteId" processpropertydefaultvalue=""/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="5" elementToSetName="tcId (Object/tcId)" key="1" valueType="track">
+                                    <trackparameter defaultValue="" propertyId="dynamicdocument.ddpTestCaseId" propertyName="Dynamic Document Property - ddpTestCaseId"/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="8" elementToSetName="actualVal (Object/actualVal)" key="4" valueType="track">
+                                    <trackparameter defaultValue="" propertyId="dynamicdocument.ddpActualVal" propertyName="Dynamic Document Property - ddpActualVal"/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="7" elementToSetName="status (Object/status)" key="3" valueType="track">
+                                    <trackparameter defaultValue="" propertyId="dynamicdocument.ddpTestCaseStatus" propertyName="Dynamic Document Property - ddpTestCaseStatus"/>
+                                </parametervalue>
+                                <parametervalue elementToSetId="3" elementToSetName="execDt (Object/execDt)" key="2" valueType="date">
+                                    <dateparameter dateparametertype="current" datetimemask="yyyy-MM-dd HH:mm:ss.SSS"/>
+                                </parametervalue>
+                            </parameters>
+                            <dynamicProperties/>
+                        </connectoraction>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape28.dragpoint1" toShape="shape43" x="1952.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="message_icon" name="shape43" shapetype="message" userlabel="Return Payload" x="1968.0" y="208.0">
+                    <configuration>
+                        <message combined="false">
+                            <msgTxt>{1}</msgTxt>
+                            <msgParameters>
+                                <parametervalue key="0" valueType="track">
+                                    <trackparameter defaultValue="" propertyId="dynamicdocument.ddpTestCaseStatus" propertyName="Dynamic Document Property - ddpTestCaseStatus"/>
+                                </parametervalue>
+                            </msgParameters>
+                        </message>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape43.dragpoint1" toShape="shape46" x="2144.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+                <shape image="returndocuments_icon" name="shape45" shapetype="returndocuments" x="2352.0" y="208.0">
+                    <configuration>
+                        <returndocuments/>
+                    </configuration>
+                    <dragpoints/>
+                </shape>
+                <shape image="dataprocess_icon" name="shape46" shapetype="dataprocess" userlabel="Combine" x="2160.0" y="208.0">
+                    <configuration>
+                        <dataprocess>
+                            <step index="1" key="1" name="Combine Documents" processtype="9">
+                                <dataprocesscombine profileType="flatfile">
+                                    <FFOptions freeFormFooter="" freeFormHeader="" headersOption="none"/>
+                                </dataprocesscombine>
+                            </step>
+                        </dataprocess>
+                    </configuration>
+                    <dragpoints>
+                        <dragpoint name="shape46.dragpoint1" toShape="shape45" x="2336.0" y="216.0"/>
+                    </dragpoints>
+                </shape>
+            </shapes>
+        </process>
+    </bns:object>
+    <bns:processOverrides/>
+</bns:Component>
