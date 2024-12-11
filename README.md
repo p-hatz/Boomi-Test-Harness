@@ -39,8 +39,7 @@
 
     You should get something like
     "Clone da3ba1f4-0f18-4b40-a149-9a54c01248b9 created from 5b9cf704-3f42-4e40-b0fd-5027a400e90a"
-
-    ### Call the Test Controller Process
+### Call the Test Controller Process
 13. Provide the Clone Id and the Id of the Process under test
     {
       "processIdParent": "5b9cf704-3f42-4e40-b0fd-5027a400e90a",
