@@ -191,7 +191,7 @@
                     <configuration>
                         <message combined="false">
                             <msgTxt>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
-&lt;bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" name="(wsvc) 1. Test Controller - Main" type="process"&gt;
+&lt;bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" name="(wsvc) 1. Test Controller" type="process"&gt;
     &lt;bns:encryptedValues/&gt;
     &lt;bns:description&gt;&lt;/bns:description&gt;
     &lt;bns:object&gt;
