@@ -1,6 +1,10 @@
 ## Steps
 ### DB
 1. Run [MariaDB-DDL.sql](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/MariaDB-DDL.sql)
+2. The following tables need to be populated
+    - `testSuite`: Test Suite data
+    - `testCase`: Test Case data
+    - `testCaseExpected`: Expected Test Case data
 ### AtomSphere
 2. Use the [Component Creation API](https://developer.boomi.com/api/platformapi#tag/Component) to create the **(wsvc) 0. Create API Test** process [(wsvc) 0. Create API Test.xml](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/(wsvc)%200.%20Create%20API%20Test.xml) (reuse your existing Connections to limit the impact on licencing)
 3. Use the [Component Creation API](https://developer.boomi.com/api/platformapi#tag/Component) to create the **(wsvc) 1. Test Controller** process [(wsvc) 1. Test Controller.xml](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/(wsvc)%201.%20Test%20Controller.xml) (reuse your existing Connections to limit the impact on licencing)
