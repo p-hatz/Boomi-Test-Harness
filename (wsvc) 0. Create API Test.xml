@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="/" componentId="56941add-7d61-4f09-8f87-cdb8b5c17fbb" version="1" name="(wsvc) 0. Create API Test" type="process" createdDate="2024-12-11T03:27:58Z" createdBy="peterantony@boomi.com" modifiedDate="2024-12-11T03:27:58Z" modifiedBy="peterantony@boomi.com" deleted="false" currentVersion="true" folderName="/" folderId="RjoyNzA1MDY1" branchName="main" branchId="Qjo0NjgxMw">
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" name="(wsvc) 0. Create API Test" type="process">
     <bns:encryptedValues/>
     <bns:description></bns:description>
     <bns:object>
