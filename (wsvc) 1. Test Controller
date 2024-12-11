@@ -27,7 +27,7 @@
                 </shape>
                 <shape image="processcall_icon" name="shape5" shapetype="processcall" userlabel="" x="1008.0" y="208.0">
                     <configuration>
-                        <processcall abort="true" processId="e7d73492-ba8f-426e-bba5-2cc27ca296dc" wait="true">
+                        <processcall abort="true" processId="" wait="true">
                             <parameters/>
                             <returnpaths>
                                 <returnpaths childShapeName="shape65"/>
@@ -77,7 +77,7 @@
                 </shape>
                 <shape image="connectoraction_icon" name="shape10" shapetype="connectoraction" userlabel="" x="432.0" y="48.0">
                     <configuration>
-                        <connectoraction actionType="GET" allowDynamicCredentials="NONE" connectionId="634d7f82-0da3-414c-b0ef-1e4206624e40" connectorType="officialboomi-X3979C-dbv2da-prod" hideSettings="false" operationId="52d8f42a-491b-49b6-820c-5b0a8685c842" parameter-profile="d7a3d9f8-95ca-4ccb-9a03-ff1a11c00b9b">
+                        <connectoraction actionType="GET" allowDynamicCredentials="NONE" connectionId="918d4151-910e-48f5-8a29-ca0e487d1adc" connectorType="officialboomi-X3979C-dbv2da-prod" hideSettings="false" operationId="52d8f42a-491b-49b6-820c-5b0a8685c842" parameter-profile="d7a3d9f8-95ca-4ccb-9a03-ff1a11c00b9b">
                             <parameters>
                                 <parametervalue elementToSetId="8" elementToSetName="processIdSrc (Object/processIdSrc)" key="0" valueType="process">
                                     <processparameter processproperty="dppProcessIdParent" processpropertydefaultvalue=""/>
@@ -195,7 +195,7 @@
                 </shape>
                 <shape image="connectoraction_icon" name="shape28" shapetype="connectoraction" userlabel="" x="1776.0" y="208.0">
                     <configuration>
-                        <connectoraction actionType="INSERT" allowDynamicCredentials="NONE" connectionId="0c7f488c-78fe-485d-b1fe-08e2c85e74d5" connectorType="officialboomi-X3979C-dbv2da-prod" hideSettings="false" operationId="14a44dbf-0c22-4e96-9b27-fa2e8530429e" parameter-profile="2a216266-2511-43c7-b8a4-02f9f639866e">
+                        <connectoraction actionType="INSERT" allowDynamicCredentials="NONE" connectionId="918d4151-910e-48f5-8a29-ca0e487d1adc" connectorType="officialboomi-X3979C-dbv2da-prod" hideSettings="false" operationId="14a44dbf-0c22-4e96-9b27-fa2e8530429e" parameter-profile="2a216266-2511-43c7-b8a4-02f9f639866e">
                             <parameters>
                                 <parametervalue elementToSetId="9" elementToSetName="execId (Object/execId)" key="5" valueType="process">
                                     <processparameter processproperty="dppExecutionId" processpropertydefaultvalue=""/>
