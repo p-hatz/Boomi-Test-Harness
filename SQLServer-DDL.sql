@@ -1,4 +1,3 @@
--- SQLINES FOR EVALUATION USE ONLY (14 DAYS)
 CREATE TABLE processTestSuite (
   processIdSrc varchar(64) DEFAULT NULL,
   processIdClone varchar(64) DEFAULT NULL,
