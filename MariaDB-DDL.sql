@@ -7,8 +7,7 @@ CREATE TABLE `processTestSuite` (
 
 CREATE TABLE `testSuite` (
   `id` int(11) NOT NULL auto_increment primary key,
-  `name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `name` varchar(20) DEFAULT NULL
 );
 
 
@@ -38,9 +37,6 @@ CREATE TABLE `testCaseExec` (
   `actualVal` varchar(1000) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `execDt` timestamp NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `tsId` (`tsId`),
-  KEY `tcId` (`tcId`),
   CONSTRAINT `testCaseExec_ibfk_1` FOREIGN KEY (`tsId`) REFERENCES `testSuite` (`id`),
   CONSTRAINT `testCaseExec_ibfk_2` FOREIGN KEY (`tcId`) REFERENCES `testCase` (`id`)
 );
