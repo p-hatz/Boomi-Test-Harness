@@ -6,7 +6,7 @@ CREATE TABLE `processTestSuite` (
 );
 
 CREATE TABLE `testSuite` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL auto_increment primary key,
   `name` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
@@ -31,7 +31,7 @@ CREATE TABLE `testCaseExpected` (
 );
 
 CREATE TABLE `testCaseExec` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) auto_increment primary key,
   `execId` varchar(64) NOT NULL,
   `tsId` int(11) DEFAULT NULL,
   `tcId` int(11) DEFAULT NULL,
