@@ -6,9 +6,9 @@
     - `testCase`: Test Case data
     - `testCaseExpected`: Expected Test Case data
 ### AtomSphere
-3. Use the [Component Creation API](https://developer.boomi.com/api/platformapi#tag/Component) to create the **(wsvc) 0. Create API Test** process [(wsvc) 0. Create API Test.xml](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/(wsvc)%200.%20Create%20API%20Test.xml) (reuse your existing Connections to limit the impact on licencing)
-4. Use the [Component Creation API](https://developer.boomi.com/api/platformapi#tag/Component) to create the **(wsvc) 1. Test Controller** process [(wsvc) 1. Test Controller.xml](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/(wsvc)%201.%20Test%20Controller.xml) (reuse your existing Connections to limit the impact on licencing)
-5. Update the `Controller Component Definition` shape in the **(wsvc) 0. Create API Test** process, as this creates the **(wsvc) 1. Test Controller** based on Step 4
+3. Use the [Component Creation API](https://developer.boomi.com/api/platformapi#tag/Component) to create the `(wsvc) 0. Create API Test` process [(wsvc) 0. Create API Test.xml](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/(wsvc)%200.%20Create%20API%20Test.xml) (reuse your existing Connections to limit the impact on licencing)
+4. Use the [Component Creation API](https://developer.boomi.com/api/platformapi#tag/Component) to create the `(wsvc) 1. Test Controller` process [(wsvc) 1. Test Controller.xml](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/(wsvc)%201.%20Test%20Controller.xml) (reuse your existing Connections to limit the impact on licencing)
+5. Update the `Controller Component Definition` shape in the **(wsvc) 0. Create API Test** process, as this creates the `(wsvc) 1. Test Controller` based on Step 4
 ### (wsvc) 0. Create API Test Process
 6. Update the `Globs` Shape
     - `dppAccountId` to your AtomSphere Account Id
