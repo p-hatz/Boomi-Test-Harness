@@ -46,10 +46,10 @@
    * `(oper) Test Case Exec INSERT`
 6. Retrieve the Component definition for the `(wsvc) 1. Test Controller` using the Process Id as a GET parameter to the [AtomSphere Component API](https://developer.boomi.com/api/platformapi#tag/Component)
 7. With the output from Step 7, in a Text editor replace the line `<processcall abort="true" processId="UUIDUsedInStep6" wait="true">` with `<processcall abort="true" processId="'{1}'" wait="true">` in the `Controller Component Definition` Shape that's part of the `(wsvc) 0. Create API Test Process` process
-9. Package and Deploy both `(wsvc) 0. Create API Test Process` and `(wsvc) 1. Test Controller`
+8. Package and Deploy both `(wsvc) 0. Create API Test Process` and `(wsvc) 1. Test Controller`
 
 ### Testing
-10. Call the API that was deployed as part of Step 9 with the Id of a Process that has a `Web Services Server` Start Shape
+9. Call the API that was deployed as part of Step 8 with the Id of a Process that has a `Web Services Server` Start Shape
 ```
 {
     "processId": "5b9cf704-3f42-4e40-b0fd-5027a400e90a"
@@ -64,8 +64,8 @@ _Clone da3ba1f4-0f18-4b40-a149-9a54c01248b9 created from 5b9cf704-3f42-4e40-b0fd
 Ensure the Process Under Test is connected to the `Actual Value` Shape as follows:
 ![image](https://github.com/user-attachments/assets/99ac388b-b5a2-40c1-afc6-4873d1151f84)
 
-11. Make sure the `testCase.tsId` field points to the right Test Suite Id in the `testSuite` table
-12. Call the API that was deployed as part of Step 9 as follows
+10. Make sure the `testCase.tsId` field points to the right Test Suite Id in the `testSuite` table
+11. Call the API that was deployed as part of Step 9 as follows
 ```
 {
     "processIdParent": "5b9cf704-3f42-4e40-b0fd-5027a400e90a",
@@ -75,5 +75,3 @@ Ensure the Process Under Test is connected to the `Actual Value` Shape as follow
 ```
 
 You should get either a `0` for a **successful** Test Case execution or a `1` for an **unsuccessful** Test Case execution
-
-
