@@ -65,7 +65,7 @@ Ensure the Process Under Test is connected to the `Actual Value` Shape as follow
 ![image](https://github.com/user-attachments/assets/99ac388b-b5a2-40c1-afc6-4873d1151f84)
 
 10. Make sure the `testCase.tsId` field points to the right Test Suite Id in the `testSuite` table
-11. Call the API that was deployed as part of Step 9 as follows
+11. Call the API that was deployed as part of Step 8 as follows
 ```
 {
     "processIdParent": "5b9cf704-3f42-4e40-b0fd-5027a400e90a",
