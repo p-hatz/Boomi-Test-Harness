@@ -38,5 +38,10 @@
 6. Get the Component definition for the `(wsvc) 1. Test Controller` using the Process Id as a GET to the [AtomSphere Component API](https://developer.boomi.com/api/platformapi#tag/Component)
 7. With the output from Step 6, in a Text editor and replace the line `<processcall abort="true" processId="UUIDUsedInStep6" wait="true">` with `<processcall abort="true" processId="{1}" wait="true">`
 8. Package and Deploy the process
-   
-   
+9. Call the API that was deployed as part of Step 8 as follows
+> {<br>
+>&emsp;&emsp;"processId": "5b9cf704-3f42-4e40-b0fd-5027a400e90a"<br>
+> }
+
+You should get something similar to<br>
+_Clone da3ba1f4-0f18-4b40-a149-9a54c01248b9 created from 5b9cf704-3f42-4e40-b0fd-5027a400e90a (Test Suite Id: 7)_
