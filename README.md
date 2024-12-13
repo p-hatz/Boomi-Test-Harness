@@ -35,12 +35,14 @@
    * `(oper) ComponentDef (INSERT)`
    
 5. Package and Deploy the process
-6. Get the Component definition for the `(wsvc) 1. Test Controller` using the Process Id as a GET to the [AtomSphere Component API](https://developer.boomi.com/api/platformapi#tag/Component)
-7. With the output from Step 6, in a Text editor and replace the line `<processcall abort="true" processId="UUIDUsedInStep6" wait="true">` with `<processcall abort="true" processId="{1}" wait="true">`
-8. Package and Deploy the process
+6. Open the Process `(wsvc) 1. Test Controller` from the AtomSphere Folder you installed the Bundle in and update the following Operations to include the schema where the tables in Step 1 were created
+   * `(oper) Test Case Exec INSERT`
+7. Retrieve the Component definition for the `(wsvc) 1. Test Controller` using the Process Id as a GET parameter to the [AtomSphere Component API](https://developer.boomi.com/api/platformapi#tag/Component)
+8. With the output from Step 7, in a Text editor replace the line `<processcall abort="true" processId="UUIDUsedInStep6" wait="true">` with `<processcall abort="true" processId="'{1}'" wait="true">` in the `Controller Component Definition` Shape that's part of the `(wsvc) 0. Create API Test Process` process
+9. Package and Deploy the process
 
 ### Testing
-9. Call the API that was deployed as part of Step 8 with the Id of a Process that has a `Web Services Server` Start Shape
+10. Call the API that was deployed as part of Step 8 with the Id of a Process that has a `Web Services Server` Start Shape
 > {<br>
 >&emsp;&emsp;"processId": "5b9cf704-3f42-4e40-b0fd-5027a400e90a"<br>
 > }
