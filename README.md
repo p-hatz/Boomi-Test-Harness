@@ -12,18 +12,24 @@
    * `dppAccountId` to your AtomSphere Account Id
    * `dppEnvId` to your AtomSphere Environment Id where the Test Harness will be deployed
    * `dppProdIdController` to the UUID of `(wsvc) 1. Test Controller`
+   ii. Update the `(conn) AtomSphere API` (Boomi AtomSphere API) Connection
+   * WSDL
+   * Username
+   * API Token or Password
+   iii. Update the `(conn) AtomSphere API` (HTTP) Connection
+   * Username
+   * Password
+   iv. Update the `(conn) MariaDB` Connection (or whichever DB Connection you'll be using)
+   * Connection URL
+   * Class Name
+   * Username
+   * Password
 5. Package and Deploy the Process
 6. Package and Deploy the Process
 7. Update the `Controller Component Definition` shape in the `(wsvc) 0. Create API Test` process, as this creates the `(wsvc) 1. Test Controller` based on Step 4 (the `connectionId`, (possibly) `connectorType`, `operationId` and `parameter-profile` values will change once the `(wsvc) 1. Test Controller` process is created)
-9. Update the `(conn) AtomSphere API` (Boomi AtomSphere API) Connection
-    - WSDL
-    - Username
-    - API Token or Password
-10. Update the `(conn) AtomSphere API` (HTTP) Connection
-    - Username
-    - Password
-11. Update the `(conn) MariaDB` Connection (or whichever DB Connection you'll be using)
-    - Connection URL
+9. 
+11. 
+    - 
     - User Name
     - Password
 12. Update the `(oper) Process Test Suite (DELETE)` Operation
