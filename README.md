@@ -70,7 +70,7 @@ Ensure the Process Under Test is connected to the `Actual Value` Shape as follow
 {
     "processIdParent": "5b9cf704-3f42-4e40-b0fd-5027a400e90a",
     "processIdChild": "da3ba1f4-0f18-4b40-a149-9a54c01248b9",
-    "testSuiteId": 15
+    "testSuiteId": 7
 }
 ```
 
