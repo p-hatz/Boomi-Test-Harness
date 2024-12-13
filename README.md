@@ -74,5 +74,6 @@ Ensure the Process Under Test is connected to the `Actual Value` Shape as follow
 }
 ```
 
-You should get something similar to<br>
-_Clone da3ba1f4-0f18-4b40-a149-9a54c01248b9 created from 5b9cf704-3f42-4e40-b0fd-5027a400e90a (Test Suite Id: 7)_
+You should get either a `0` for a **successful** Test Case execution or a `1` for an **unsuccessful** Test Case execution
+
+
