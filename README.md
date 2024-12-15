@@ -2,7 +2,6 @@
 ### DB
 1. Run the SQL in [MariaDB-DDL.sql](https://github.com/p-hatz/Boomi-Test-Harness/blob/main/MariaDB-DDL.sql)
 2. The following tables need to be populated
-    - `testSuite`: Test Suite data
     - `testCase`: Test Case data
     - `testCaseExpected`: Expected Test Case data
 ### AtomSphere
