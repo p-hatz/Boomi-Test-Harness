@@ -13,6 +13,7 @@
      
     ii. Update the `Process Ids` Shape
    * `dppProdIdController` to the UUID of `(wsvc) 1. Test Controller`
+   * `dppControllerFolderId` to the Folder Id of where you installed the Bundle
    
     iii. Update the `(conn) AtomSphere API` (Boomi AtomSphere API) Connection
    * `WSDL`
