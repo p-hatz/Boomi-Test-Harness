@@ -41,6 +41,14 @@ CREATE TABLE `testCaseExec` (
   CONSTRAINT `testCaseExec_ibfk_2` FOREIGN KEY (`tcId`) REFERENCES `testCase` (`id`)
 );
 
+CREATE TABLE `componentDef` (
+  `componentId` varchar(64) DEFAULT NULL,
+  `shapeName` varchar(32) DEFAULT NULL,
+  `shapeType` varchar(128) DEFAULT NULL,
+  `shapeLabel` varchar(256) DEFAULT NULL,
+  `nextShape` varchar(32) DEFAULT NULL
+);
+
 CREATE OR REPLACE VIEW `vwTestCaseActualvsExpected` AS
 select
     `tcexec`.`execId` AS `execId`,
