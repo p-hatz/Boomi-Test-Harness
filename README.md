@@ -10,24 +10,26 @@
     i. Update the `Globs` Shape
    * `dppAccountId` to your AtomSphere Account Id
    * `dppEnvId` to your AtomSphere Environment Id where the Test Harness will be deployed
+     
+    ii. Update the `Process Ids` Shape
    * `dppProdIdController` to the UUID of `(wsvc) 1. Test Controller`
    
-    ii. Update the `(conn) AtomSphere API` (Boomi AtomSphere API) Connection
+    iii. Update the `(conn) AtomSphere API` (Boomi AtomSphere API) Connection
    * `WSDL`
    * `Username`
    * `API Token` or `Password`
 
-   iii. Update the `(conn) AtomSphere API` (HTTP) Connection
+   iv. Update the `(conn) AtomSphere API` (HTTP) Connection
    * `Username`
    * `Password`
   
-   iv. Update the `(conn) MariaDB` Connection (or whichever DB Connection you'll be using)
+   v. Update the `(conn) MariaDB` Connection (or whichever DB Connection you'll be using)
    * `Connection URL`
    * `Class Name`
    * `Username` (with read/write access to the tables that were created in Step 1)
    * `Password`
 
-   v. Update the following Operations to include the schema where the tables in Step 1 were created
+   vi. Update the following Operations to include the schema where the tables in Step 1 were created
    * `(oper) Test Suite (INSERT)`
    * `(oper) Test Suite (SELECT)`
    * `(oper) Process Test Suite (INSERT)`
