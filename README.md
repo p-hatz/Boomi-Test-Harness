@@ -5,7 +5,7 @@
     - `testCase`: Test Case data
     - `testCaseExpected`: Expected Test Case data
 ### AtomSphere
-3. Install the Bundle located at https://platform.boomi.com/BoomiLabs.html#pub_bundles;/tab=my_bundles/bundle=1cbe864a-5781-4c3c-afba-8b5e5a549811/bundleOwner=true
+3. Install the Bundle located at [https://platform.boomi.com/BoomiLabs.html#pub_bundles;/tab=my_bundles/bundle=1cbe864a-5781-4c3c-afba-8b5e5a549811/bundleOwner=true](https://platform.boomi.com/BoomiLabs.html#pub_bundles;/tab=my_bundles/bundle=1cbe864a-5781-4c3c-afba-8b5e5a549811/bundleOwner=true)
 4. Open the Process `(wsvc) 0. Create API Test Process` from the AtomSphere Folder you installed the Bundle in and update the following (or reuse any existing connection(s))<br>
     i. Update the `Globs` Shape
    * `dppAccountId` to your AtomSphere Account Id
@@ -47,7 +47,7 @@
    * `(oper) Test Case Expected GET`
    * `(oper) Test Case Exec INSERT`
 6. Retrieve the Component definition for the `(wsvc) 1. Test Controller` using the Process Id as a GET parameter to the [AtomSphere Component API](https://developer.boomi.com/api/platformapi#tag/Component)
-7. With the output from Step 6, in a Text editor replace the line `<processcall abort="true" processId="{1}" wait="true">` with `<processcall abort="true" processId="'{1}'" wait="true">` (note the single quotes) in the `Controller Component Definition` Shape that's part of the `(wsvc) 0. Create API Test Process` process
+7. With the output from Step 6, ensure there is a line for the process call (it should be `<processcall abort="true" processId="{1}" wait="true">`) and paste into the `Controller Component Definition` Shape that's part of the `(wsvc) 0. Create API Test Process` process
 8. Package and Deploy both `(wsvc) 0. Create API Test Process` and `(wsvc) 1. Test Controller`
 
 ### Testing
