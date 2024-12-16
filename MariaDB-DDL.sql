@@ -15,7 +15,6 @@ CREATE TABLE `testCase` (
   `id` int(11) auto_increment primary key,
   `name` varchar(40) DEFAULT NULL,
   `tsId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
   KEY `fk_ts_id` (`tsId`),
   CONSTRAINT `fk_ts_id` FOREIGN KEY (`tsId`) REFERENCES `testSuite` (`id`)
 );
@@ -42,11 +41,12 @@ CREATE TABLE `testCaseExec` (
 );
 
 CREATE TABLE `componentDef` (
-  `componentId` varchar(64) DEFAULT NULL,
-  `shapeName` varchar(32) DEFAULT NULL,
+  `componentId` varchar(64) not null,
+  `shapeName` varchar(32) not null,
   `shapeType` varchar(128) DEFAULT NULL,
   `shapeLabel` varchar(256) DEFAULT NULL,
-  `nextShape` varchar(32) DEFAULT NULL
+  `nextShape` varchar(32) DEFAULT NULL,
+  primary key (componentId,shapeName)
 );
 
 CREATE OR REPLACE VIEW `vwTestCaseActualvsExpected` AS
