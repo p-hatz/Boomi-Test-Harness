@@ -7,7 +7,7 @@ CREATE TABLE `processTestSuite` (
 
 CREATE TABLE `testSuite` (
   `id` int(11) NOT NULL auto_increment primary key,
-  `name` varchar(20) DEFAULT NULL
+  `name` varchar(200) DEFAULT NULL
 );
 
 
