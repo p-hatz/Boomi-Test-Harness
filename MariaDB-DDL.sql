@@ -12,7 +12,7 @@ CREATE TABLE `testSuite` (
 
 
 CREATE TABLE `testCase` (
-  `id` int(11) NOT NULL,
+  `id` int(11) auto_increment primary key,
   `name` varchar(40) DEFAULT NULL,
   `tsId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -22,7 +22,7 @@ CREATE TABLE `testCase` (
 
 
 CREATE TABLE `testCaseExpected` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) auto_increment primary key,
   `val` varchar(1000) DEFAULT NULL,
   `tcId` int(11) DEFAULT NULL,
   KEY `fk_tc_id` (`tcId`),
