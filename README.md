@@ -47,7 +47,7 @@
    * `(oper) Test Case Expected GET`
    * `(oper) Test Case Exec INSERT`
 6. Retrieve the Component definition for the `(wsvc) 1. Test Controller` using the Process Id as a GET parameter to the [AtomSphere Component API](https://developer.boomi.com/api/platformapi#tag/Component)
-7. With the output from Step 6, ensure there is a line for the process call (it should be `<processcall abort="true" processId="{1}" wait="true">`) and paste into the `Controller Component Definition` Shape that's part of the `(wsvc) 0. Create API Test Process` process
+7. With the output from Step 6, update the line `<processcall abort="true" processId="..."` to `<processcall abort="true" processId="{1}" wait="true">`. Paste this into the `Controller Component Definition` Shape that's part of the `(wsvc) 0. Create API Test Process` process
 8. Package and Deploy both `(wsvc) 0. Create API Test Process` and `(wsvc) 1. Test Controller`
 
 ### Testing
